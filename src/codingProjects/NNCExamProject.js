@@ -58,8 +58,7 @@ const styles = StyleSheet.create({
         margin: 10
 	},
 	alignLeft: {
-		textAlign:'left',
-		padding: '1%'
+		textAlign:'left'
 	}
 })
 
