@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         minWidth: 200,
         height: "100%",
         borderWidth: 1, 
-        position: 'absolute',
+        position: 'fixed',
         display: 'block',
         overflow: 'auto',
         flex: 1,
