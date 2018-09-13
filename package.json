@@ -1,0 +1,38 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@blueprintjs/core": "^3.5.1",
+    "@blueprintjs/datetime": "^3.1.0",
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-native": "^0.56.17",
+    "player.js": "^0.1.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-filters": "^0.3.1",
+    "react-native-typescript-transformer": "^1.2.10",
+    "react-navigation": "^2.12.1",
+    "react-scripts": "1.1.5",
+    "react-sticky": "^6.0.3",
+    "react-svg": "^6.0.9",
+    "react-syntax-highlighter": "^8.0.1",
+    "redux": "^4.0.0",
+    "video-react": "^0.13.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "resize-observer-polyfill": "^1.5.0",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.0.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-command": "^0.4.1"
+  }
+}

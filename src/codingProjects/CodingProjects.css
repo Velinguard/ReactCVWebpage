@@ -1,0 +1,14 @@
+.DatePicker {
+    max-width: 500px;
+    width: 500px;
+    height: 500px;    
+    max-height: 400px;        
+}
+.p {
+    width: "100%";
+}
+
+#code {
+    float: right;
+    color: blue;
+}
