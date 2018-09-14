@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Dimensions } from 'react-native';
-import {Alignment, Button, Checkbox, Classes, Text, Popover, Position} from '@blueprintjs/core';
+import {StyleSheet, View, Image, Dimensions, TouchableOpacity, TouchableHighlight } from 'react-native';
+import {Alignment, Button, Checkbox, Classes, Text, Popover, Position, Hotkeys, Hotkey} from '@blueprintjs/core';
 import { DateRange, DateRangePicker, TimePrecision } from "@blueprintjs/datetime";
 import '@blueprintjs/datetime/lib/css/blueprint-datetime.css'
 import './CodingProjects.css';
@@ -10,6 +10,7 @@ import { checkStatesNNWP, NNWebsiteProject } from './NNWebsiteProject';
 import { checkStatesPS, ProjectileShooter } from './ProjectileShooter';
 import { checkStatesSE, StarExplorer } from './StarExplorer';
 import { StickyContainer, Sticky } from 'react-sticky';
+import { PERCENTAGE } from '@blueprintjs/icons/lib/esm/generated/iconContents';
 
 const filterBoxViewWidth = 700;
 
@@ -23,7 +24,8 @@ const styles = StyleSheet.create({
         display: 'block',
         overflow: 'auto',
         flex: 1,
-        zIndex: 8, 
+        zIndex: 8,
+        backgroundColor: 'white', 
     },
     Value: {
         display: 'inline-block',
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
         marginLeft: (Dimensions.get('window').width >= filterBoxViewWidth) ? 200 : 0,
         display: 'block',
 		padding: '1%'
-    }
+    },
 })
 
 
@@ -79,11 +81,30 @@ export class CodingProjects extends Component{
             filterBoxVisible: false,
         }
     }
+    onPress = () => {
+        this.setState((prevState) => {Java: false});
+    }
 
     render(){
+        let buttonImg = {
+			uri : require('./resources/Button.png')
+		}
         return (
             <div className="bp3-running-text .modifier" >
                 <div className="SearchBox" >
+                    
+                    {(Dimensions.get('window').width < filterBoxViewWidth) &&                   
+                        <div>
+                            <button style={{top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 7, opacity: 0}} onClick={() => this.setState(prevState => ({filterBoxVisible: !prevState.filterBoxVisible}))}/>
+                            <Image 
+                                style={{top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 5,}}
+                                source={buttonImg}
+                                accessibilityLabel="The team of 13 that built the bridge."
+                                accessible
+                            />
+                        </div>
+                    }
+
                     {(Dimensions.get('window').width >= filterBoxViewWidth || this.state.filterBoxVisible) &&
                     <View style={styles.FilterBox}>
                         <Text style={styles.Value}>Date:</Text>
