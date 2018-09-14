@@ -84,6 +84,8 @@ export class AboutMe extends Component{
                             accessible
                         />
                     </View>
+                    <h2><i class="fas fa-terminal" style={{color: "#83B98C"}}/> Languages and Technologies </h2>
+                    <Text><i class="fab fa-java"></i> Java, C, Haskell, LaTeX, WebTechnologies (React, <i class="fab fa-js-square"></i> JavaScript, HTML, CSS), Linux, Windows. </Text>
                     <h2> Job Status </h2>
                     <p> Actively searching for a summer internship or work experience (Summer 2018). </p>
                 </div>

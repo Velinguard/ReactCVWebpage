@@ -63,7 +63,7 @@ export class India extends Component{
 
         return(
             <div class="bp3-running-text .modifier">
-                <h1>The St Gregory's Bridge</h1>
+                <h1><i class="fas fa-map-signs" style={{color: "#83B98C"}}/>  The St Gregory's Bridge <i class="fas fa-map-marked-alt" style={{color: "#83B98C"}}/></h1>
                 <View style={styles.container}>
                     <Image 
                         style={styles.banner}

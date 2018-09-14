@@ -24,13 +24,13 @@ export class AirCadets extends Component{
         return (
             <div class="bp3-running-text .modifier">
                 
-                <h2 text-align="center"> Air Cadets </h2>
-			<p> Over the last 6 years, the Air Training Corps has played an integral part in my life. After being in the Air Cadets for just a year, 
+                <h1 text-align="center"><i class="fas fa-plane-departure" style={{opacity: 0.3, color: "#83B98C"}}/>  Air Cadets  <i class="fas fa-plane-arrival" style={{color: "#DEDA9f", opacity: 0.7}}/></h1>
+			<p> <strong> Over the last 6 years, the Air Training Corps has played an integral part in my life. After being in the Air Cadets for just a year, 
 				joining in 2012, I was awarded the <i>Most Promising Cadet</i> award, this led to me being promoted to the rank of Corporal. Being thrown into 
 				the deep end as senior cadets began to age out, I soon found myself as 'Cadet In Charge'(IC) of the squadron. This necessitated learning extremely 
 				quickly how to organise and lead a team of cadets, with the squadron having tripled in size. In the following years, whilst continuing 
 				this high level of personal development, I rose through the ranks achieving the highest rank (for an under 18 year old) of Flight Sergeant by the age of 15.
-				
+				</strong>
 			</p>
             <View style={styles.container}>
                 <Image 

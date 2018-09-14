@@ -9,8 +9,6 @@ import { checkStatesNNCE, NNCExamProject } from './NNCExamProject';
 import { checkStatesNNWP, NNWebsiteProject } from './NNWebsiteProject';
 import { checkStatesPS, ProjectileShooter } from './ProjectileShooter';
 import { checkStatesSE, StarExplorer } from './StarExplorer';
-import { StickyContainer, Sticky } from 'react-sticky';
-import { PERCENTAGE } from '@blueprintjs/icons/lib/esm/generated/iconContents';
 
 const filterBoxViewWidth = 700;
 
@@ -19,13 +17,18 @@ const styles = StyleSheet.create({
         width: "10%",
         minWidth: 200,
         height: "100%",
-        borderWidth: 1, 
         position: 'fixed',
         display: 'block',
         overflow: 'auto',
         flex: 1,
         zIndex: 8,
         backgroundColor: 'white', 
+    },
+    FilterBackground: {
+        backgroundColor: 'rgba(174, 202, 153, 0.3)',
+        width: "10%",
+        minWidth: 200,
+        height: "100%",
     },
     Value: {
         display: 'inline-block',
@@ -97,7 +100,7 @@ export class CodingProjects extends Component{
                         <div>
                             <button style={{top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 7, opacity: 0}} onClick={() => this.setState(prevState => ({filterBoxVisible: !prevState.filterBoxVisible}))}/>
                             <Image 
-                                style={{top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 5,}}
+                                style={{ top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 5,}}
                                 source={buttonImg}
                                 accessibilityLabel="The team of 13 that built the bridge."
                                 accessible
@@ -107,6 +110,7 @@ export class CodingProjects extends Component{
 
                     {(Dimensions.get('window').width >= filterBoxViewWidth || this.state.filterBoxVisible) &&
                     <View style={styles.FilterBox}>
+                        <View style={styles.FilterBackground}>
                         <Text style={styles.Value}>Date:</Text>
                         <Popover style={styles.Value} 
                             content={        
@@ -185,7 +189,7 @@ export class CodingProjects extends Component{
                         <View style={styles.Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.Graphics} label="Graphics" onChange={() => this.setState(prevState => ({Graphics: !prevState.Graphics}))} />
                         </View>
-                    </View>
+                    </View></View>
                     }
                 </div>
                 <View style={styles.code}>
