@@ -17,10 +17,24 @@ const headerStyle = {
   marginTop: -90
 }
 
+var pageTag = window.location.href.split('#')[1];
+const CodingLink = "CodingProjects";
+const AboutMeLink = "AboutMe";
+const AirCadetsLink = "AirCadets";
+const StGregsBridge = "IndiaProject";
+
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {page: '3'};
+    var pageNum = 0;
+    if (pageTag === AirCadetsLink){
+      pageNum = 1;
+    } else if (pageTag === StGregsBridge){
+      pageNum = 2;
+    } else if (pageTag === CodingLink){
+      pageNum = 3;
+    }
+    this.state = {page: pageNum};
   }
   
   render() {
