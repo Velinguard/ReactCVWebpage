@@ -1,78 +1,67 @@
 import React, { Component } from 'react';
-import { Dimensions, View, Image, StyleSheet } from 'react-native';
 import {Text} from '@blueprintjs/core';
 
-function getScalableHeight(min, max, percentage, aspectRatio){
-    return getScalableWidth(min, max, percentage) * aspectRatio;
-}
+var windowWidth = window.document.body.clientWidth;
 
 function getScalableWidth(min, max, percentage){
-    let width = Dimensions.get('window').width * percentage;
+    let width = windowWidth * percentage;
 
     if (width < min){
         return min;
     }
-    if (width > max){
+    if (width > max){ 
         return max;
     }
     return width;
 }
+const bannerStyle = {
+    width: ((windowWidth <= 600) ? "100%" : "70%"),
+    flex: 1,
+    alignItems: 'center',
+    flat: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    height: 'auto'
+}
 
-const styles = StyleSheet.create({
-    banner: {
-        width: ((Dimensions.get('window').width <= 600) ? "100%" : "70%"),
-        flex: 1,
-        height: Dimensions.get('window').width * 0.3
-    },
-    stock: {
-        height: getScalableHeight(40, 400, 0.2, 1.38),
-        width: getScalableWidth(40, 400, 0.2)
-    },
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: 10
-    },
-    leftContainer: {
-        flex: 1,
-        float: 'left',
-        margin: 10
-    },
-    rightContainer: {
-        flex: 1,
-        float: 'right',
-        margin: 10
-    },
-})
+const stockStyle = {
+    height: 'auto',
+    width: getScalableWidth(40, 400, 0.2)
+}
+
+const containerStyle = {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    float: 'center',
+    margin: 10
+}
+
+const leftContainerStyle = {
+    flex: 1,
+    float: 'left',
+    margin: 10
+}
+
+const rightContainerStyle = {
+    flex: 1,
+    float: 'right',
+    margin: 10
+}
 
 export class India extends Component{
     render(){
-        let Group = {
-            uri : require('../resources/group.jpg')
-        }
-        let Crack = {
-            uri : require('../resources/crack.jpg')
-        }
-        let InTheRain = {
-            uri : require('../resources/In the Rain.jpg')
-        }
-        let Locals = {
-            uri : require('../resources/locals.jpg')
-        }
 
         return(
             <div class="bp3-running-text .modifier">
                 <h1><i class="fas fa-map-signs" style={{color: "#83B98C"}}/>  The St Gregory's Bridge <i class="fas fa-map-marked-alt" style={{color: "#83B98C"}}/></h1>
-                <View style={styles.container}>
-                    <Image 
-                        style={styles.banner}
-                        source={Group}
-                        resizeMethod="cover"
-                        accessibilityLabel="The team of 13 that built the bridge."
+                <div style={containerStyle}>
+                    <img 
+                        src={require('../resources/group.jpg')}
+                        accessibilityLabel="The team that built the St Gregory's Bridge."
                         accessible
                     />
-                </View>
+                </div>
                 <p id = "content2p"> 
                     <strong>
                     In the summer of 2016; whilst accounting for limited capital, time and manpower I led a team of mathematicians in designing a 
@@ -84,15 +73,14 @@ export class India extends Component{
                     </strong>
                 </p>
                 
-                <View style={styles.leftContainer}>
-                    <Image 
-                        style={styles.stock}
-                        source={InTheRain}
-                        resizeMethod="cover"
+                <div style={leftContainerStyle}>
+                    <img 
+                        style={stockStyle}
+                        src={require('../resources/In the Rain.jpg')}
                         accessibilityLabel="Fixing the last of the bridge in monsoon conditions."
                         accessible
                     />
-                </View>
+                </div>
                 <Text>Experiencing and living in a culture outside my own was an eye-opening experience. It is impossible to describe how that time 
                     has affected me as a person, profoundly shaping my values, outlook and perceptions. Aside from character building, working on 
                     a large-scale project with such a diverse team, developed and tested my problem solving and engineering skills. On a daily basis, 
@@ -113,15 +101,15 @@ export class India extends Component{
                     river. Creating a harness by attaching ourselves to the top cable, we could then crawl out onto the planks, tightening them as we 
                     went, once a plank was tightened we could advance to the next. This process was iterated for over 80 individually hand cut planks.
                 </p>
-                <View style={styles.rightContainer}>
-                    <Image 
-                        style={styles.stock}
-                        source={Crack}
+                <div style={rightContainerStyle}>
+                    <img 
+                        style={stockStyle}
+                        src={require('../resources/crack.jpg')}
                         resizeMethod="cover"
                         accessibilityLabel="The crack in the cement."
                         accessible
                     />
-                </View>
+                </div>
                 <p>
                     Whilst in the UK we anticipated that in such wet conditions we would be unable to secure the cement and steel beams ourselves, the 
                     weather would make it impossible for the cement to dry. To accommodate this, we hired a local contractor to pour the cement months 
@@ -133,15 +121,15 @@ export class India extends Component{
                     development of the bridge. We began by reinforcing the front pillars with the excess cable we had, fixing them to the back ones. 
                     In conjunction with this, across the bridge, we connected the top and bottom cables, forcing the pressure downwards on the supports.
                 </p>
-                <View style={styles.container}>
-                    <Image 
-                        style={styles.banner}
-                        source={Locals}
+                <div style={containerStyle}>
+                    <img 
+                        style={bannerStyle}
+                        src={require('../resources/locals.jpg')}
                         resizeMethod="cover"
                         accessibilityLabel="A village local walking across the bridge for the first time."
                         accessible
                     />
-                </View>
+                </div>
                 <p>
                     The reaction of the locals during the opening ceremony of the bridge made all the time, effort and stress worthwhile. To this date, the genuine
                     smile and pleasure on the faces of the locals as they walked across the bridge for the first time is the most memorable experience I have ever had.

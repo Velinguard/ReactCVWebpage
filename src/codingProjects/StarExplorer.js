@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {Code, Text, H2, H5, H4} from '@blueprintjs/core';
-import {View, Dimensions } from 'react-native';
 import {Player} from 'video-react';
 import 'video-react/dist/video-react.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/styles/hljs';
+import ReactPlayer from 'react-player'
 
 export function checkStatesSE(states){
     return (states.state.Java && 
@@ -35,11 +35,11 @@ export class StarExplorer extends React.PureComponent{
                 <Text>
                     The following code contains the algorithm for obtaining the position of the spectral lines from an inputted image:
                 </Text>
-                <View style={{textAlign:'left'}}>
+                <div style={{textAlign:'left'}}>
                     <SyntaxHighlighter language='java'>
     {'for (int i = 0; i <= height - 1; i++){\n  //Goes across the image, for example when x = 0, we are working on the left most pixel.\n      for (int x = 0; x <= width - 1; x++) {\n		pixels[x][i] = new Pixel(img.getRGB(x, i), accuracy);\n\n	//If it is black then add to a count to determine how many absorption lines there are, the last means that\n        //the same absorption line is not counted twice.\n        if(pixels[x][i].getBlack() && !last){\n            step++;\n            last = true;\n        } else {\n            last = false;\n        }\n    }\n    //If we have already found the best degree of accuracy or if this is the right degree.\n    if (step == shouldBe || stop){\n        stop = true;\n    } else if (shouldBe == 0){\n        stop = true;\n        array.add(setPixels(70));\n        //This allows for me to make a simplified version for the general user, with an average accuracy.\n    } else {\n        //If the number it should be is less than the number it is, it should go back up.\n        if (step < shouldBe || goneTo){\n            goneTo = true;\n            //If the number it should be is more than the number it is, we go back one and use that as the closest\n            //that we will get.\n            if (step > shouldBe){\n                stop = true;\n                array.add(setPixels(accuracy - 1)); //worst come situation.\n            }\n            array.add(setPixels(accuracy + 2));\n        } else {\n            array.add(setPixels(accuracy - 10));\n        }\n    }\n}'}
                     </SyntaxHighlighter>
-                </View>
+                </div>
                 <Text>
                     This project was my third attempt at a large Computer Science project, it served as an accumulation of all the knowledge I 
                     learned from studying Computer Science at A-Level for the past year as well as spending the last year self-teaching myself Java. 
@@ -50,14 +50,14 @@ export class StarExplorer extends React.PureComponent{
                     I still managed to complete the project way before the May 2017 deadline to a standard that with very broad guidelines and 
                     extremely minimal help I was, and my clients were, happy with. 
                 </Text>
-                <View style={{width: '70%', height: '70%', float:'centre'}}>
-					<Player 
+                <div style={{width: '70%', height: '70%', float:'centre'}}>
+					<ReactPlayer 
 						playsInline 
 						url={{src: './resources/Star Explorer Demo.mp4', type: 'video/mp4'}}
 						width='70%'
 						height='70%'
 					/>
-				</View>
+				</div>
                 <Text> 
                     What is unseen in the above demo is that when the <i>'Find file'</i> button is pressed, a file explorer pops up that allows the
                     image to be selected.

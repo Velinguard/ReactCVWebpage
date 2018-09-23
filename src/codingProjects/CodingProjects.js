@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Image, Dimensions, TouchableOpacity, TouchableHighlight } from 'react-native';
 import {Alignment, Button, Checkbox, Classes, Text, Popover, Position, Hotkeys, Hotkey} from '@blueprintjs/core';
 import { DateRange, DateRangePicker, TimePrecision } from "@blueprintjs/datetime";
 import '@blueprintjs/datetime/lib/css/blueprint-datetime.css'
@@ -11,41 +10,38 @@ import { checkStatesPS, ProjectileShooter } from './ProjectileShooter';
 import { checkStatesSE, StarExplorer } from './StarExplorer';
 
 const filterBoxViewWidth = 700;
+ 
+var windowWidth = window.document.body.clientWidth; 
+const FilterBox = {
+    width: "10%",
+    minWidth: 200,
+    height: "100%",
+    position: 'fixed',
+    display: 'block',
+    overflow: 'auto',
+    flex: 1,
+    zIndex: 8,
+    backgroundColor: 'white', 
+}
+const FilterBackground = {
+    backgroundColor: 'rgba(174, 202, 153, 0.3)',
+    width: "10%",
+    minWidth: 200,
+    height: "100%",
+}
 
-const styles = StyleSheet.create({
-    FilterBox: {
-        width: "10%",
-        minWidth: 200,
-        height: "100%",
-        position: 'fixed',
-        display: 'block',
-        overflow: 'auto',
-        flex: 1,
-        zIndex: 8,
-        backgroundColor: 'white', 
-    },
-    FilterBackground: {
-        backgroundColor: 'rgba(174, 202, 153, 0.3)',
-        width: "10%",
-        minWidth: 200,
-        height: "100%",
-    },
-    Value: {
-        display: 'inline-block',
-        width: '100%',
-        paddingLeft: '5%'
-    },
-    DateRangePicker: {
-        zIndex: 9999
-    },
-    code: {
-        width: (Dimensions.get('window').width >= filterBoxViewWidth) ? Dimensions.get('window').width - 200 : "100%",
-        marginLeft: (Dimensions.get('window').width >= filterBoxViewWidth) ? 200 : 0,
-        display: 'block',
-		padding: '1%'
-    },
-})
+const Value = {
+    display: 'inline-block',
+    width: '100%',
+    paddingLeft: '5%'
+}
 
+var code = {
+    width: (windowWidth >= filterBoxViewWidth) ? windowWidth - 200 : "100%",
+    marginLeft: (windowWidth >= filterBoxViewWidth) ? 200 : 0,
+    display: 'block',
+    padding: '1%'
+}
 
 function withinRange(firstRange, isInclosedIn){
     return ((isInclosedIn[0] >= firstRange[0] && isInclosedIn[1] <= firstRange[1]) || (isInclosedIn[0] >= firstRange[0] && firstRange[1] == new Date()));
@@ -89,30 +85,27 @@ export class CodingProjects extends Component{
     }
 
     render(){
-        let buttonImg = {
-			uri : require('./resources/Button.png')
-		}
         return (
             <div className="bp3-running-text .modifier" >
                 <div className="SearchBox" >
                     
-                    {(Dimensions.get('window').width < filterBoxViewWidth) &&                   
+                    {(windowWidth < filterBoxViewWidth) &&                   
                         <div>
                             <button style={{top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 7, opacity: 0}} onClick={() => this.setState(prevState => ({filterBoxVisible: !prevState.filterBoxVisible}))}/>
-                            <Image 
+                            <img 
                                 style={{ top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 5,}}
-                                source={buttonImg}
+                                src={require('./resources/Button.png')}
                                 accessibilityLabel="The team of 13 that built the bridge."
                                 accessible
                             />
                         </div>
                     }
 
-                    {(Dimensions.get('window').width >= filterBoxViewWidth || this.state.filterBoxVisible) &&
-                    <View style={styles.FilterBox}>
-                        <View style={styles.FilterBackground}>
-                        <Text style={styles.Value}>Date:</Text>
-                        <Popover style={styles.Value} 
+                    {(windowWidth >= filterBoxViewWidth || this.state.filterBoxVisible) &&
+                    <div style={FilterBox}>
+                        <div style={FilterBackground}>
+                        <Text style={Value}>Date: </Text>
+                        <Popover style={Value} 
                             content={        
                                 <DateRangePicker 
                                     value={this.state.dateRange}
@@ -131,14 +124,14 @@ export class CodingProjects extends Component{
                                         this.setState(prevState => ({FirstYear: withinRange(dateRange, firstYearDateRange)}))
                                         this.setState(prevState => ({PreUni: withinRange(dateRange, beforeUniDateRange)}))
                                     }}
-                                    styles={styles.DateRangePicker}
+                                    styles={{zIndex: 9999}}
                                 />
                             }
                             target={<Button text="Select Date"/>}
                             align={Alignment.CENTER}
                             position={Position.RIGHT}
                         />
-                        <View style={styles.Value}>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.FirstYear} label="First Year" onChange={() => {
                                 this.setState(prevState => ({FirstYear: !prevState.FirstYear}));
                                 if (!this.state.FirstYear){ 
@@ -151,8 +144,8 @@ export class CodingProjects extends Component{
                                     }
                                 }
                                 }} />
-                        </View>
-                        <View style={styles.Value}>
+                        </div>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.PreUni} label="Before University" onChange={() => {
                                 this.setState(prevState => ({PreUni: !prevState.PreUni}));
                                 if (!this.state.PreUni){ 
@@ -165,40 +158,40 @@ export class CodingProjects extends Component{
                                     }
                                 }
                             }} />
-                        </View>
-                        <Text style={styles.Value}>Language:</Text>
-                        <View style={styles.Value}>
+                        </div>
+                        <Text style={Value}>Language:</Text>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.Java} label="Java" onChange={() => this.setState(prevState => ({Java: !prevState.Java}))} />
-                        </View>
-                        <View style={styles.Value}>
+                        </div>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.C} label="C" onChange={() => this.setState(prevState => ({C: !prevState.C}))} />
-                        </View>
-                        <View style={styles.Value}>
+                        </div>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.Web} label="Web Technologies" onChange={() => this.setState(prevState => ({Web: !prevState.Web}))} />
-                        </View>
-                        <Text style={styles.Value}>Topic:</Text>
-                        <View style={styles.Value}>
+                        </div>
+                        <Text style={Value}>Topic:</Text>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.NN} label="Neural Networks" onChange={() => this.setState(prevState => ({NN: !prevState.NN}))} />
-                        </View>
-                        <View style={styles.Value}>
+                        </div>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.AI} label="AI" onChange={() => this.setState(prevState => ({AI: !prevState.AI}))} />
-                        </View>
-                        <View style={styles.Value}>
+                        </div>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.Simulation} label="Simulation" onChange={() => this.setState(prevState => ({Simulation: !prevState.Simulation}))} />
-                        </View>
-                        <View style={styles.Value}>
+                        </div>
+                        <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.Graphics} label="Graphics" onChange={() => this.setState(prevState => ({Graphics: !prevState.Graphics}))} />
-                        </View>
-                    </View></View>
+                        </div>
+                    </div></div>
                     }
                 </div>
-                <View style={styles.code}>
+                <div style={code}>
                     {(checkStatesNNCE(this) && <NNCExamProject/>)}
                     {(checkStatesNNWP(this) && <NNWebsiteProject/>)}
                     {(checkStatesPS(this) && <ProjectileShooter/>)}
                     {(checkStatesSE(this) && <StarExplorer/>)}
                     {(checkStatesEPQ(this) && <EPQ/>)}
-                </View>
+                </div>
             </div>
         );
     }

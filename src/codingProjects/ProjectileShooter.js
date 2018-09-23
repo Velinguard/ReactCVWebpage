@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Code, Text, H2, H5, H4} from '@blueprintjs/core';
-import {View, Dimensions } from 'react-native';
 import {Player} from 'video-react';
+import ReactPlayer from 'react-player'
 import 'video-react/dist/video-react.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/styles/hljs';
@@ -41,28 +41,28 @@ export class ProjectileShooter extends React.PureComponent{
 				<p>
 					Where missile and aa are Java objects that satisfy the Projectiles interface defined by:
 				</p>
-				<View style={{textAlign:'left'}}>
+				<div style={{textAlign:'left'}}>
 					<SyntaxHighlighter language='java' style={docco}>
 						{'MathsModule mm = new MathsModule(missile, aa, distanceAway);\n	Thread th = new Thread(mm);\n	th.start();\n\n	//Complete other operations..\n\n	try {\n		th.join();\n	} catch (InterruptedException e) {\n		e.printStackTrace();\n\n}\n \n//To get outputs:\n\ntimeToStart = mm.getTimeToStart();\nxCollide = mm.getxCollide();\nyCollide = mm.getyCollide();\ntimeCollide = mm.getTimeCollide();'}
 					</SyntaxHighlighter>
-				</View>
-				<View style={{textAlign:'left'}}>
+				</div>
+				<div style={{textAlign:'left'}}>
 					<SyntaxHighlighter language='java' style={docco}>
 							{"public interface Projectile {\n	double getSpeed();\n	double getAngle();\n}"}
 					</SyntaxHighlighter>
-				</View>
+				</div>
 				<p>
 					Where <Code>getSpeed()</Code> returns the initial velocity of a Projectile in ms<sup>-1</sup>, and <Code>getAngle()</Code> returns the angle of the rocket in radians.
 				</p>
 				<p> An example of the code being run with the included graphics package is as follows: </p>
-				<View style={{width: '70%', height: '70%', float:'centre'}}>
-					<Player 
-						playsInline 
-						url={{src: require('./resources/Projectile Shooter.mp4'), type: 'video/mp4'}}
+				<div style={{width: '70%', height: '70%', float:'centre'}}>
+					<ReactPlayer 
+						controls
+						url={{src: require("./resources/Projectile Shooter.mp4")}}
 						width='70%'
 						height='70%'
 					/>
-				</View>
+				</div>
 				<a href="https://github.com/Velinguard/Projectile-Shooter"><p> Git Repository</p></a>
             </div>
         );

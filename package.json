@@ -14,7 +14,9 @@
     "react-filters": "^0.3.1",
     "react-native-typescript-transformer": "^1.2.10",
     "react-navigation": "^2.12.1",
+    "react-player": "^1.6.4",
     "react-scripts": "1.1.5",
+    "react-sizes": "^1.0.4",
     "react-sticky": "^6.0.3",
     "react-svg": "^6.0.9",
     "react-syntax-highlighter": "^8.0.1",
@@ -28,11 +30,49 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@gov.au/footer": "^2.1.7",
     "awesome-typescript-loader": "^5.2.1",
     "resize-observer-polyfill": "^1.5.0",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.0.3",
     "webpack-cli": "^3.1.0",
     "webpack-command": "^0.4.1"
+  },
+  "pancake": {
+    "auto-save": true,
+    "plugins": true,
+    "ignore": [],
+    "json": {
+      "enable": false,
+      "location": "pancake/",
+      "name": "pancake",
+      "content": {
+        "name": true,
+        "version": true,
+        "dependencies": true,
+        "path": true,
+        "settings": true
+      }
+    },
+    "css": {
+      "minified": true,
+      "modules": false,
+      "browsers": [
+        "last 2 versions",
+        "ie 8",
+        "ie 9",
+        "ie 10"
+      ],
+      "location": "pancake/css/",
+      "name": "pancake.min.css"
+    },
+    "sass": {
+      "modules": false,
+      "location": "pancake/sass/",
+      "name": "pancake.scss"
+    },
+    "react": {
+      "location": "pancake/react/"
+    }
   }
 }

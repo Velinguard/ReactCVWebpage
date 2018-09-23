@@ -19,3 +19,11 @@
 .App-body {
   background-color: #fffff9;  
 }
+
+.header {
+  position: 'fixed'; 
+  z-index: 9999; 
+  width: '100%'; 
+  background-color: 'rgba(255,255,255,1)'; 
+  margin-top: -90;
+}

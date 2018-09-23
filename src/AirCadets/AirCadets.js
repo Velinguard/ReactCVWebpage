@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
-import { Dimensions, View, Image, StyleSheet } from 'react-native';
-import {Text} from '@blueprintjs/core';
 
-const styles = StyleSheet.create({
-    banner: {
-        width: "100%",
-        height: Dimensions.get('window').width * 0.3
-    },
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: 10
-    },
-})
-
+const banner= {
+	width: "80%",
+	height: 'auto'
+}
+const container= {
+	flex: 1,
+	justifyContent: 'center',
+	alignItems: 'center',
+	margin: 10
+}
 
 export class AirCadets extends Component{
     render(){
-        let Cadets = {
-            uri : require('../resources/Cadets.jpg')
-        }
         return (
             <div class="bp3-running-text .modifier">
                 
@@ -32,15 +24,15 @@ export class AirCadets extends Component{
 				this high level of personal development, I rose through the ranks achieving the highest rank (for an under 18 year old) of Flight Sergeant by the age of 15.
 				</strong>
 			</p>
-            <View style={styles.container}>
-                <Image 
-                    style={styles.banner}
-                    source={Cadets}
+            <div style={container}>
+                <img 
+                    style={banner}
+                    src={require('../resources/Cadets.jpg')}
                     resizeMethod="cover"
                     accessibilityLabel="The cadet squadron I am apart of"
                     accessible
                 />
-            </View>
+            </div>
 			<p>
 				In October 2015, I had the honour of being selected as the wreath bearer for the Air Training Corps in front of thousands of people, during the biggest
 				parade for the Royal Navy Cadets (Trafalgar Day Parade in Trafalgar Square, London). In the preceding days, we stayed at the Royal Naval Base on Whale 
