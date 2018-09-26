@@ -19,9 +19,8 @@ const headerStyle = {
 
 var pageTag = window.location.href.split('#')[1];
 const CodingLink = "CodingProjects";
-const AboutMeLink = "AboutMe";
 const AirCadetsLink = "AirCadets";
-const StGregsBridge = "IndiaProject";
+const StGregsBridgeLink = "IndiaProject";
 
 class App extends Component {
   constructor(props){
@@ -29,7 +28,7 @@ class App extends Component {
     var pageNum = 0;
     if (pageTag === AirCadetsLink){
       pageNum = 1;
-    } else if (pageTag === StGregsBridge){
+    } else if (pageTag === StGregsBridgeLink){
       pageNum = 2;
     } else if (pageTag === CodingLink){
       pageNum = 3;
