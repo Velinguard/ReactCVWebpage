@@ -17,6 +17,8 @@ const headerStyle = {
   marginTop: -90
 }
 
+var windowWidth = window.document.body.clientWidth;
+
 var pageTag = window.location.href.split('#')[1];
 const CodingLink = "CodingProjects";
 const AirCadetsLink = "AirCadets";
@@ -37,6 +39,10 @@ class App extends Component {
   }
   
   render() {
+    var me = ((windowWidth >= 600) ? "Samuel Brotherton CV Webpage" : "CV");
+    var cadets = ((windowWidth >= 600) ? "Air Cadets" : "ATC");
+    var bridge = ((windowWidth >= 600) ? "St Gregory's Bridge" : "EPQ");
+    var coding = ((windowWidth >= 600) ? "Coding Projects" : "Projects");
     return (
       <div className="App">
         <div style={headerStyle}>
@@ -44,12 +50,12 @@ class App extends Component {
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
             <Navbar>
               <Navbar.Group align={Alignment.LEFT}>
-                  <Navbar.Heading>Samuel Brotherton CV Webpage</Navbar.Heading>
+                  <Navbar.Heading>{me}</Navbar.Heading>
                   <Navbar.Divider />
                   <Button className="bp3-minimal" icon="home" text="Home" onClick={() => this.setState({page: 0})} />
-                  <Button className="bp3-minimal" icon="airplane" text="Air Cadets" onClick={() => this.setState({page: 1})}/>
-                  <Button className="bp3-minimal" icon="wrench" text="St Gregory's Bridge" onClick={() => this.setState({page: 2})} />
-                  <Button className="bp3-minimal" icon="console" text="Coding Projects" onClick={() => this.setState({page: 3})}/>
+                  <Button className="bp3-minimal" icon="airplane" text={cadets} onClick={() => this.setState({page: 1})}/>
+                  <Button className="bp3-minimal" icon="wrench" text={bridge} onClick={() => this.setState({page: 2})} />
+                  <Button className="bp3-minimal" icon="console" text={coding} onClick={() => this.setState({page: 3})}/>
               </Navbar.Group>
             </Navbar>
           </header>

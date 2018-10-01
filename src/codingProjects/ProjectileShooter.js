@@ -56,12 +56,6 @@ export class ProjectileShooter extends React.PureComponent{
 				</p>
 				<p> An example of the code being run with the included graphics package is as follows: </p>
 				<div style={{width: '70%', height: '70%', float:'centre'}}>
-					<ReactPlayer 
-						controls
-						url={{src: require("./resources/Projectile Shooter.mp4")}}
-						width='70%'
-						height='70%'
-					/>
 				</div>
 				<a href="https://github.com/Velinguard/Projectile-Shooter"><p> Git Repository</p></a>
             </div>

@@ -51,12 +51,6 @@ export class StarExplorer extends React.PureComponent{
                     extremely minimal help I was, and my clients were, happy with. 
                 </Text>
                 <div style={{width: '70%', height: '70%', float:'centre'}}>
-					<ReactPlayer 
-						playsInline 
-						url={{src: './resources/Star Explorer Demo.mp4', type: 'video/mp4'}}
-						width='70%'
-						height='70%'
-					/>
 				</div>
                 <Text> 
                     What is unseen in the above demo is that when the <i>'Find file'</i> button is pressed, a file explorer pops up that allows the

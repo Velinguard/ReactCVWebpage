@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
+var windowWidth = window.document.body.clientWidth;
 const banner= {
-	width: "80%",
+	width: ((windowWidth <= 600) ? "100%" : "70%"),
 	height: 'auto'
 }
 const container= {
@@ -15,7 +16,7 @@ export class AirCadets extends Component{
     render(){
         return (
             <div class="bp3-running-text .modifier">
-                
+                <div style={{padding: "2%"}}>
                 <h1 text-align="center"><i class="fas fa-plane-departure" style={{opacity: 0.3, color: "#83B98C"}}/>  Air Cadets  <i class="fas fa-plane-arrival" style={{color: "#DEDA9f", opacity: 0.7}}/></h1>
 			<p> <strong> Over the last 6 years, the Air Training Corps has played an integral part in my life. After being in the Air Cadets for just a year, 
 				joining in 2012, I was awarded the <i>Most Promising Cadet</i> award, this led to me being promoted to the rank of Corporal. Being thrown into 
@@ -61,6 +62,7 @@ export class AirCadets extends Component{
 				(until the leadership role fell upon me again) developing a new strategy better suited to a less autocratic and more collaborative environment. 
 				Implementing this into my skillset helped to diversify my leadership style, allowing me to quickly switch between different approaches where appropriate. 
 			</p>
+			</div>
             </div>
         )
     }

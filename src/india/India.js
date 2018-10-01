@@ -3,17 +3,6 @@ import {Text} from '@blueprintjs/core';
 
 var windowWidth = window.document.body.clientWidth;
 
-function getScalableWidth(min, max, percentage){
-    let width = windowWidth * percentage;
-
-    if (width < min){
-        return min;
-    }
-    if (width > max){ 
-        return max;
-    }
-    return width;
-}
 const bannerStyle = {
     width: ((windowWidth <= 600) ? "100%" : "70%"),
     flex: 1,
@@ -26,10 +15,11 @@ const bannerStyle = {
 
 const stockStyle = {
     height: 'auto',
-    width: getScalableWidth(40, 400, 0.2)
+    width: ((windowWidth >= 400)) ? 400 : "20%",
 }
 
 const containerStyle = {
+    width: ((windowWidth <= 600) ? "100%" : "70%"),
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -53,16 +43,17 @@ export class India extends Component{
     render(){
 
         return(
-            <div class="bp3-running-text .modifier">
+            <div class="bp3-running-text .modifier" style={{padding:"1%"}}>
                 <h1><i class="fas fa-map-signs" style={{color: "#83B98C"}}/>  The St Gregory's Bridge <i class="fas fa-map-marked-alt" style={{color: "#83B98C"}}/></h1>
                 <div style={containerStyle}>
                     <img 
+                        style={{width: ((windowWidth <= 600) ? windowWidth : "70%")}}
                         src={require('../resources/group.jpg')}
                         accessibilityLabel="The team that built the St Gregory's Bridge."
                         accessible
                     />
                 </div>
-                <p id = "content2p"> 
+                <p id = "content2p" style={{padding:"2%"}}> 
                     <strong>
                     In the summer of 2016; whilst accounting for limited capital, time and manpower I led a team of mathematicians in designing a 
                     120ft suspension bridge, in a remote location in Goa, India. An iterative process was required to solve many of the project 
@@ -81,18 +72,18 @@ export class India extends Component{
                         accessible
                     />
                 </div>
-                <Text>Experiencing and living in a culture outside my own was an eye-opening experience. It is impossible to describe how that time 
+                <Text style={{padding:"2%"}}>Experiencing and living in a culture outside my own was an eye-opening experience. It is impossible to describe how that time 
                     has affected me as a person, profoundly shaping my values, outlook and perceptions. Aside from character building, working on 
                     a large-scale project with such a diverse team, developed and tested my problem solving and engineering skills. On a daily basis, 
                     project threatening issues would arise requiring innovative and fast solutions. </Text>
                 
-                <p>
+                <p style={{padding:"2%"}}>
                     Experiencing and living in a culture outside my own was an eye-opening experience. It is impossible to describe how that time 
                     has affected me as a person, profoundly shaping my values, outlook and perceptions. Aside from character building, working on 
                     a large-scale project with such a diverse team, developed and tested my problem solving and engineering skills. On a daily basis, 
                     project threatening issues would arise requiring innovative and fast solutions. 
                 </p>
-                <p>
+                <p style={{padding:"2%"}}>
                     Building the bridge during the monsoon season was the source of most issues, however this was the only time available to us as 
                     students. During this season the river is at maximum capacity, the water was treacherous. Falling in would be fatal therefore we 
                     needed to develop a way of safely constructing the bridge. The solution was to build the bridge from the outside, inwards. We 
@@ -110,7 +101,7 @@ export class India extends Component{
                         accessible
                     />
                 </div>
-                <p>
+                <p style={{padding:"2%"}}>
                     Whilst in the UK we anticipated that in such wet conditions we would be unable to secure the cement and steel beams ourselves, the 
                     weather would make it impossible for the cement to dry. To accommodate this, we hired a local contractor to pour the cement months 
                     before we arrived. This came with its own issues as the original workers ran off with the money! Another contractor was hired; 
@@ -130,7 +121,7 @@ export class India extends Component{
                         accessible
                     />
                 </div>
-                <p>
+                <p style={{padding:"2%"}}>
                     The reaction of the locals during the opening ceremony of the bridge made all the time, effort and stress worthwhile. To this date, the genuine
                     smile and pleasure on the faces of the locals as they walked across the bridge for the first time is the most memorable experience I have ever had.
                 </p>

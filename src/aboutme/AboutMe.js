@@ -3,31 +3,15 @@ import {Text} from '@blueprintjs/core';
 
 var windowWidth = window.document.body.clientWidth; 
 
-function getScalableHeight(min, max, percentage, aspectRatio){
-    return getScalableWidth(min, max, percentage) * aspectRatio;
-}
-
-function getScalableWidth(min, max, percentage){
-    let width = windowWidth * percentage;
-
-    if (width < min){
-        return min;
-    }
-    if (width > max){
-        return max;
-    }
-    return width;
-}
-
 const portraitStyle= {
     height: 'auto',
-    width: getScalableWidth(40, 600, 0.2),
+    width: (windowWidth >= 400) ? 400 : "70%",
     borderRadius: 100,
     borderWidth: 0
 }
 const leftAlignStyle= {
     height: 'auto',
-    width: getScalableWidth(40, 400, 0.2)
+    width: (windowWidth >= 250) ? 250 : "70%",
 }
 const container= {
     flex: 1,
@@ -36,12 +20,10 @@ const container= {
     margin: 10
 }
 
-
-
 export class AboutMe extends Component{
     render(){
         return (
-            <div>
+            <div style={{padding: "2%"}}>
                 <h1 class="bp3-heading"> About me </h1>
                 <div style={container}>
                     <img 
