@@ -13,22 +13,6 @@ export function checkStatesNNCE(states){
 
 var windowWidth = window.document.body.clientWidth; 
 
-function getScalableHeight(min, max, percentage, aspectRatio){
-    return getScalableWidth(min, max, percentage) * aspectRatio;
-}
-
-function getScalableWidth(min, max, percentage){
-    let width = windowWidth * percentage;
-
-    if (width < min){
-        return min;
-    }
-    if (width > max){
-        return max;
-    }
-    return width;
-}
-
 const XOR = {
 	width: '70%',
 	height: '70%',
@@ -41,12 +25,12 @@ const container= {
 	margin: 10
 }
 const output= {
-	height: getScalableHeight(40, 400, 0.2, 1.5),
-	width: getScalableWidth(40, 400, 0.2)
+	height: 'auto',
+	width: ((windowWidth <= 600) ? "100%" : "40%")
 }
 const structure= {
-	height: getScalableHeight(40, 400, 0.2, 0.72),
-	width: getScalableWidth(40, 400, 0.2)
+	height: 'auto',
+	width: ((windowWidth <= 600) ? "100%" : "40%")
 }
 const leftContainer= {
 	flex: 1,

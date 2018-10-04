@@ -4,6 +4,14 @@ import 'video-react/dist/video-react.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/styles/hljs';
 
+var windowWidth = window.document.body.clientWidth; 
+
+const CodeExample = {
+	width: (windowWidth > 700) ? "70%": "95%",
+	padding: "2%",
+	height: 'auto'
+}
+
 export function checkStatesPS(states){
     return (states.state.Java && 
         (states.state.Simulation ||
@@ -53,6 +61,10 @@ export class ProjectileShooter extends React.PureComponent{
 					Where <Code>getSpeed()</Code> returns the initial velocity of a Projectile in ms<sup>-1</sup>, and <Code>getAngle()</Code> returns the angle of the rocket in radians.
 				</p>
 				<p> An example of the code being run with the included graphics package is as follows: </p>
+				<video style={CodeExample} controls>
+					<source src="https://www.doc.ic.ac.uk/~sb3117/about/sam/Resources/Projectile%20Shooter.mp4" type="video/mp4"/>
+				    Your browser does not support the video tag.
+				</video>
 				<div style={{width: '70%', height: '70%', float:'centre'}}>
 				</div>
 				<a href="https://github.com/Velinguard/Projectile-Shooter"><p> Git Repository</p></a>

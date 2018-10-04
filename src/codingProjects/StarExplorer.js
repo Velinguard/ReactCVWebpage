@@ -3,6 +3,14 @@ import {Text, H2, H5, H4} from '@blueprintjs/core';
 import 'video-react/dist/video-react.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
+var windowWidth = window.document.body.clientWidth; 
+
+const CodeExample = {
+	width: (windowWidth > 700) ? "70%": "95%",
+	padding: "2%",
+	height: 'auto'
+}
+
 export function checkStatesSE(states){
     return (states.state.Java && 
         (states.state.Simulation ||
@@ -53,6 +61,10 @@ export class StarExplorer extends React.PureComponent{
                     What is unseen in the above demo is that when the <i>'Find file'</i> button is pressed, a file explorer pops up that allows the
                     image to be selected.
                 </Text>
+                <video style={CodeExample} controls>
+					<source src="https://www.doc.ic.ac.uk/~sb3117/about/sam/Resources/Star%20Explorer%20Demo.mp4" type="video/mp4"/>
+				    Your browser does not support the video tag.
+				</video>
                 <Text> 
                     In the above demo, the second image to be analysed is the same as the last image, however sodium has not been "seen" by the program yet, 
                     once the element is added, then the software is able to analyse the element sodium.
