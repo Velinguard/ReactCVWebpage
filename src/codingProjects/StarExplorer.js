@@ -1,10 +1,7 @@
 import * as React from 'react';
-import {Code, Text, H2, H5, H4} from '@blueprintjs/core';
-import {Player} from 'video-react';
+import {Text, H2, H5, H4} from '@blueprintjs/core';
 import 'video-react/dist/video-react.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/styles/hljs';
-import ReactPlayer from 'react-player'
 
 export function checkStatesSE(states){
     return (states.state.Java && 
@@ -41,8 +38,8 @@ export class StarExplorer extends React.PureComponent{
                     </SyntaxHighlighter>
                 </div>
                 <Text>
-                    This project was my third attempt at a large Computer Science project, it served as an accumulation of all the knowledge I 
-                    learned from studying Computer Science at A-Level for the past year as well as spending the last year self-teaching myself Java. 
+                    This project was my third large Computer Science project, it served as an accumulation of all the knowledge I 
+                    learned from studying Computer Science at A-Level for the past year as well as spending the prior year self-teaching myself Java. 
                     Initially starting off with this project I had no knowledge of OO techniques, I had read about them but I had not completely 
                     grasped the concept; it was halfway through this project after I had created the first fully functioning procedural prototype 
                     that OO finally clicked. I then went back and re-coded the whole project in an OO manor, teaching myself how classes, inheritance

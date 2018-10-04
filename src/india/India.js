@@ -72,11 +72,6 @@ export class India extends Component{
                         accessible
                     />
                 </div>
-                <Text style={{padding:"2%"}}>Experiencing and living in a culture outside my own was an eye-opening experience. It is impossible to describe how that time 
-                    has affected me as a person, profoundly shaping my values, outlook and perceptions. Aside from character building, working on 
-                    a large-scale project with such a diverse team, developed and tested my problem solving and engineering skills. On a daily basis, 
-                    project threatening issues would arise requiring innovative and fast solutions. </Text>
-                
                 <p style={{padding:"2%"}}>
                     Experiencing and living in a culture outside my own was an eye-opening experience. It is impossible to describe how that time 
                     has affected me as a person, profoundly shaping my values, outlook and perceptions. Aside from character building, working on 

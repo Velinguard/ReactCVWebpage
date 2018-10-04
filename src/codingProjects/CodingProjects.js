@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Alignment, Button, Checkbox, Classes, Text, Popover, Position, Hotkeys, Hotkey} from '@blueprintjs/core';
-import { DateRange, DateRangePicker, TimePrecision } from "@blueprintjs/datetime";
+import { DateRangePicker } from "@blueprintjs/datetime";
 import '@blueprintjs/datetime/lib/css/blueprint-datetime.css'
 import './CodingProjects.css';
 import {EPQ, checkStatesEPQ} from "./EPQ";

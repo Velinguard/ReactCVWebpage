@@ -1,7 +1,5 @@
 import * as React from 'react';
 import {Code, Text, H2, H5, H4} from '@blueprintjs/core';
-import {Player} from 'video-react';
-import ReactPlayer from 'react-player'
 import 'video-react/dist/video-react.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/styles/hljs';
