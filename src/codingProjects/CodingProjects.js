@@ -74,6 +74,7 @@ export class CodingProjects extends Component{
             AI: true,
             Simulation: true,
             Graphics: true,
+            OS: true,
             FirstYear: true,
             PreUni: true,
             dateRange: [beforeUniDateRange[0], new Date()],
@@ -181,6 +182,9 @@ export class CodingProjects extends Component{
                         </div>
                         <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.Graphics} label="Graphics" onChange={() => this.setState(prevState => ({Graphics: !prevState.Graphics}))} />
+                        </div>
+                        <div style={Value}>
+                            <Checkbox style={{ float: 'left' }} checked={this.state.OS} label="Operating Systems" onChange={() => this.setState(prevState => ({ OS: !prevState.OS }))} />
                         </div>
                     </div></div>
                     }

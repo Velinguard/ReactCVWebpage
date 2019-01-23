@@ -58,7 +58,7 @@ export class AirCadets extends Component{
 			</p>	
 			<p>
 				In 2015 I spent a month in Borneo travelling, where we alternated leadership roles. Initially I attempted to implement my militaristic leadership
-				skills into this scenario, however It quickly became apparent that in a none-military setting, this strategy would not be appropriate. I then spent the next few weeks
+				skills into this scenario, however It quickly became apparent that in a nonmilitary setting, this strategy would not be appropriate. I then spent the next few weeks
 				(until the leadership role fell upon me again) developing a new strategy better suited to a less autocratic and more collaborative environment. 
 				Implementing this into my skillset helped to diversify my leadership style, allowing me to quickly switch between different approaches where appropriate. 
 			</p>

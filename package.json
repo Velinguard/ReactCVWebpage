@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.velinguard.co.uk/ReactCVWebpage/",
+  "homepage": "http://www.sambrotherton.co.uk/",
   "dependencies": {
     "@blueprintjs/core": "^3.5.1",
     "@blueprintjs/datetime": "^3.1.0",

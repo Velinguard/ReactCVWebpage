@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Text} from '@blueprintjs/core';
 
 var windowWidth = window.document.body.clientWidth;
 
