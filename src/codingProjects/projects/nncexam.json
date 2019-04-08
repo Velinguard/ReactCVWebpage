@@ -1,0 +1,359 @@
+{
+  "name" : "Neural Network C Exam",
+  "language" : {
+    "java" : false,
+    "c" : true,
+    "web" : false
+  },
+  "topic" : {
+    "nn" : true,
+    "ai" : true,
+    "simulation" : false,
+    "graphics" : false,
+    "os" : false
+  },
+  "date" : {
+    "year": 2018,
+    "month": 6,
+    "day": 23
+  },
+  "body" : [
+      {
+        "type" : "h2",
+        "specialchar": {
+          "front" : {
+            "class": "fas fa-brain",
+            "style": {
+              "color": "orange"
+            }
+          },
+          "back" : {
+            "class": "fas fa-brain",
+            "style": {
+              "color": "blue"
+            }
+          }
+        },
+        "body" : "Feed-Forward Artificial Neural Network"
+      },
+      {
+        "type" : "text",
+        "body" : "A Feed-Forward Artificial Neural Network entirely in C, using backpropagation algorithm to train."
+      },
+      {
+        "type" : "text",
+        "body" : "Utilising the knowledge and techniques I learned when researching Feed-Forward Networks and Backpropagation for my teams website project I was able to develop a ANN model entirely in C which was able to learn the XOR problem achieving over 99% accuracy."
+      },
+      {
+        "type" : "git-repo",
+        "url" : "https://github.com/Velinguard/C-Artificial-Neural-Network"
+      },
+      {
+        "type" : "h3",
+        "body" : "Code Analysis",
+        "style" : {
+          "padding": "0.4",
+          "marginTop": "0"
+        }
+      },
+      {
+        "type" : "text",
+        "body" : "Before starting this project I needed to decompose the different tasks and then decide upon the structs and function definitions for each of these."
+      },
+      {
+        "type" : "align-left",
+        "body" : [
+          {
+            "type": "h5",
+            "body": "Structs"
+          },
+          {
+            "type": "u-list",
+            "body": [
+              {
+                "type" : "entry",
+                "label" : {
+                  "type": "reference",
+                  "url": "https://github.com/Velinguard/C-Artificial-Neural-Network/blob/master/includes/layer.h",
+                  "body": {
+                    "type": "code",
+                    "body": "layer_t"
+                  }
+                },
+                "body": [
+                  {
+                    "type": "text",
+                    "body": "This struct will act like a graph and point to the next and previous layers, as well as storing information about each nodes biase, output, delta and incoming weights, also keeping track of number of input and output nodes."
+                  },
+                  {
+                    "type": "highlighter",
+                    "language": "c",
+                    "style": "docco",
+                    "url" : "./resources/layer.c",
+                    "body": "typedef struct layer {\n\t/* Number of inputs and outputs (neurons).*/\n\tint num_inputs, num_outputs;\n\t/* Output of EACH neuron. */\n\tdouble *outputs;\n\t/* Pointers to previous and next layer if any. */\n\tstruct layer *prev;\n\tstruct layer *next;\n\t/* Incoming weights of EACH neuron. */\n\tdouble **weights;\n\t/* Biases of EACH neuron. */\n\tdouble *biases;\n\t/* Delta errors of EACH neuron. */\n\tdouble *deltas;\n} layer_t;"
+                  }
+                ]
+              },
+              {
+                "type": "entry",
+                "label": {
+                  "type": "reference",
+                  "url": "https://github.com/Velinguard/C-Artificial-Neural-Network/blob/master/includes/ann.h",
+                  "body": {
+                    "type": "code",
+                    "body": "ann_t"
+                  }
+                },
+                "body": [
+                  {
+                    "type": "text",
+                    "body": "This struct will store the input and output layer, keeping track of the neural network."
+                  },
+                  {
+                    "type": "highlighter",
+                    "language": "c",
+                    "style": "docco",
+                    "body": "typedef struct ann {\n\t/* The head and tail of layers doubly linked list. */\n\tlayer_t *input_layer;\n\tlayer_t *output_layer;\n} ann_t;"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "h5",
+            "body": "Problem Decomposition"
+          },
+          {
+            "type": "u-list",
+            "body": [
+              {
+                "type": "entry",
+                "label": {
+                  "type": "string",
+                  "body": "Feed-Forward Network"
+                },
+                "body": [
+                  {
+                    "type": "u-list",
+                    "body": [
+                      {
+                        "type": "entry",
+                        "label": {
+                          "type": "string",
+                          "body": "Initialise layer."
+                        },
+                        "body": [
+                          {
+                            "type": "highlighter",
+                            "language": "c",
+                            "body": "// Initialises layer by: allocating memory, initialising biases and deltas and assigning a random value to each weight.\n// PRE: layer != null\n// POST: r -> V node : layers (Vpn : prevLayer(0 <= node->weight[pn] <= 1) & node->biase == node->delta == 0)  \nbool layer_init(layer_t *layer, int num_outputs, layer_t *prev){}"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "entry",
+                        "label": {
+                          "type": "string",
+                          "body": "Compute layer outputs."
+                        },
+                        "body": [
+                          {
+                            "type": "highlighter",
+                            "language": "c",
+                            "body": "// Computes sigmoid function for a given x value\n//PRE: 1 + exp(-x) != 0\n//POST: r = 1/(1 + exp(-x))\ndouble sigmoid(double x){}"
+                          },
+                          {
+                            "type": "highlighter",
+                            "language": "c",
+                            "body": "// Computes the output for this layer.\n// PRE: layer->prev == NULL -> prevLayer == InputLayer\n// POST: Vnode : layer (node->output = sum (V pn : prevLayer(pn->output * node->weight[pn])))\nvoid layer_compute_outputs(layer_t const *layer){}\n"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "entry",
+                        "label": {
+                          "type": "string",
+                          "body": "Link layers together."
+                        },
+                        "body": [
+                          {
+                            "type": "layered-text",
+                            "body": [
+                              {
+                                "type": "string",
+                                "body": "To put all these layers together I decided to use the struct "
+                              },
+                              {
+                                "type": "code",
+                                "body": "ann_t"
+                              },
+                              {
+                                "type": "string",
+                                "body": " and then manipulate the "
+                              },
+                              {
+                                "type": "code",
+                                "body": "layer_compute_outputs"
+                              },
+                              {
+                                "type": "string",
+                                "body": " to be a recursive function that would first compute the first hidden layer and then upwards until each layer was calculated. I needed some helper functions to start this process on a "
+                              },
+                              {
+                                "type": "code",
+                                "body": "ann_t"
+                              },
+                              {
+                                "type": "string",
+                                "body": " struct."
+                              }
+
+                            ]
+                          },
+                          {
+                            "type": "highlighter",
+                            "language": "c",
+                            "body": "// Forward run of given ann with inputs\n// PRE: ann != NULL && inputNodes != NULL && ann->inputLayer != NULL && ann->outputLayer != NULL && size(inputNodes) == size(ann->inputLayer->outputs)\n// POST: ann->outputLayer == the NN prediction output for the given input.\nvoid ann_predict(ann_t const *ann, double const *inputs){}"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "body": "XOR Problem"
+      },
+      {
+        "type": "layered-text",
+        "body": [
+          {
+            "type": "string",
+            "body": "A crucial test for any Neural Network is the XOR problem, as discussed "
+          },
+          {
+            "type": "reference",
+            "url": "https://www.doc.ic.ac.uk/~sb3117/#content2",
+            "body": {
+              "type": "string",
+              "body": "here"
+            }
+          },
+          {
+            "type": "string",
+            "body": " (see NN website project), being a relatively simple problem that cannot be solved using a linear Neural Network."
+          }
+        ]
+      },
+      {
+        "type": "h5",
+        "body": "Solution"
+      },
+      {
+        "type": "text",
+        "body": "To test this ANN API I had created I would train it on the XOR problem. I would use the structure of: 2 input nodes -> 1 hidden layer with two nodes -> 1 output node:"
+      },
+      {
+        "type": "div",
+        "style": {
+          "flex": 1,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "margin": 10
+        },
+        "body" : [
+          {
+            "type": "image",
+            "style": "structure",
+            "src": "structure",
+            "resizeMethod": "cover",
+            "accessibilityLabel": "The structure of 2 -> 2 -> 1 for the NN.",
+            "accessible": true
+          }
+        ]
+      },
+      {
+        "type": "layered-text",
+        "body": [
+          {
+            "type":"string",
+            "body": "This means it will train the data for one 'training session' (Batch size) and each 'trainint session' will train the data 25,000 times (it will call "
+
+          },
+          {
+            "type": "code",
+            "body": "ann_train"
+          },
+          {
+            "type": "string",
+            "body": " 25,000 times). This should easily be enough to see if the NN can learn the XOR function."
+          }
+        ]
+      },
+      {
+        "type": "h5",
+        "body": "Packaging"
+      },
+      {
+        "type": "text",
+        "body": "An important part of this project involves how it will be packaged, as I am creating a library for a C Neural Network that can be used by many individuals for any tractable Feed-Forward Neural Network project. I would therefore need to be careful in the structure and documentation of the project, as well as implementing a make file that would allow users to quickly implement and test there own Neural Networks."
+      },
+      {
+        "type": "h5",
+        "body": "Analysis"
+      },
+      {
+        "type" : "layered-text",
+        "body" : [
+          {
+            "type": "string",
+            "body": "Running through the "
+          },
+          {
+            "type": "reference",
+            "url": "https://github.com/Velinguard/C-Artificial-Neural-Network/blob/master/testsuite/train.c",
+            "body": {
+              "type": "code",
+              "body": "train.c"
+            }
+          },
+          {
+            "type": "string",
+            "body": " file runs through the training of the Neural Network, and outputs the confidence of the network after training is complete:"
+          }
+        ]
+      },
+      {
+        "type": "div",
+        "style": {
+          "flex": 1,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "margin": 10
+        },
+        "body" : [
+          {
+            "type": "image",
+            "style": "output",
+            "src": "XORNNOutput",
+            "resizeMethod": "cover",
+            "accessibilityLabel": "The output showing the state and confidence of the network after training.",
+            "accessible": true
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "body": "As you can see from this the network is able to gain a confidence of over 99% after just 25,000 epochs. Although this is a very simple example of how the Network can be used, it proves it can be used to solve non-linear problems."
+      },
+      {
+        "type": "text",
+        "body": "I believe this project was a success in combining all the different techniques I learned during my first year studies, from my studies of C to the in-depth resarch conducted during my Computing Topics project. I was able to learn how to work on a proffesional standard C project, from project structure, commenting and documentation, as well as managing header and make files."
+      }
+    ]
+}

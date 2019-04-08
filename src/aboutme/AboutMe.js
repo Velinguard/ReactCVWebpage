@@ -60,8 +60,6 @@ export class AboutMe extends Component{
                     </div>
                     <h2><i class="fas fa-terminal" style={{color: "#83B98C"}}/> Languages and Technologies </h2>
                     <Text><i class="fab fa-java"></i> <a href="https://github.com/Velinguard/Projectile-Shooter">Java</a>, <a href="https://github.com/Velinguard/C-Artificial-Neural-Network">C</a>, C++, Haskell, LaTeX, WebTechnologies (<a href="https://github.com/Velinguard/ReactCVWebpage">React, <i class="fab fa-js-square"></i> JavaScript, HTML, CSS</a>), Linux, Windows. </Text>
-                    <h2> Job Status </h2>
-                    <p> Actively searching for a summer internship or work experience (Summer 2018). </p>
                 </div>
             </div>
         );

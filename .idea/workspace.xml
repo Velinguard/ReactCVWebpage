@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4d00d3a-5eb0-4e73-99f9-16db1b1a42e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/codingProjects/projects/epq.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/codingProjects/projects/nncexam.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/codingProjects/resources/layer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pancake/css/pancake.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pancake/css/pancake.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pancake/react/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/pancake/react/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pancake/sass/pancake.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pancake/sass/pancake.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aboutme/AboutMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aboutme/AboutMe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codingProjects/CodingProjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/codingProjects/CodingProjects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codingProjects/EPQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codingProjects/NNCExamProject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codingProjects/Pintos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/codingProjects/Pintos.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.43255815">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/App.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/Pintos.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="918">
+                  <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/NNWebsiteProject.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/CodingProjects.css">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/CodingProjects.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1064">
+                  <caret line="302" column="34" selection-start-line="302" selection-start-column="34" selection-end-line="302" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                    <element signature="n#!!block;n#constructArticle#0" />
+                    <element signature="n#!!block;n#constructor#0;n#CodingProjects#0" />
+                    <element signature="e#6813#6873#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/ProjectileShooter.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-27">
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/StarExplorer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/footer/Footer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/resources/layer.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/projects/nncexam.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+                  <folding>
+                    <element signature="n#!!block;n#language#0;n#!!top" />
+                    <element signature="n#!!block;n#topic#0;n#!!top" />
+                    <element signature="e#278#682#0" />
+                    <element signature="e#326#615#0" />
+                    <element signature="e#690#936#0" />
+                    <element signature="e#944#1473#0" />
+                    <element signature="e#1165#1202#0" />
+                    <element signature="e#1286#1317#0" />
+                    <element signature="e#1481#1680#0" />
+                    <element signature="e#1654#8718#0" />
+                    <element signature="e#9160#9190#0" />
+                    <element signature="e#9229#9287#0" />
+                    <element signature="e#9865#9895#0" />
+                    <element signature="e#9932#9974#0" />
+                    <element signature="e#10158#10365#0" />
+                    <element signature="e#10637#11198#0" />
+                    <element signature="e#11204#11234#0" />
+                    <element signature="e#11272#11305#0" />
+                    <element signature="e#11745#11775#0" />
+                    <element signature="e#11812#11853#0" />
+                    <element signature="e#12456#12487#0" />
+                    <element signature="e#12970#13002#0" />
+                    <element signature="e#13259#13301#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/codingProjects/projects/epq.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+                  <folding>
+                    <element signature="n#!!block;n#language#0;n#!!top" />
+                    <element signature="n#!!block;n#topic#0;n#!!top" />
+                    <element signature="n#!!block;n#date#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="package.json" />
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>checkStates</find>
+      <find>console.log</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/aboutme/AboutMe.js" />
+        <option value="$PROJECT_DIR$/src/codingProjects/Pintos.js" />
+        <option value="$PROJECT_DIR$/src/codingProjects/package.json" />
+        <option value="$PROJECT_DIR$/src/codingProjects/EPQ.js" />
+        <option value="$PROJECT_DIR$/src/codingProjects/epq.json" />
+        <option value="$PROJECT_DIR$/src/codingProjects/NNCExamProject.js" />
+        <option value="$PROJECT_DIR$/src/codingProjects/resources/layer.c" />
+        <option value="$PROJECT_DIR$/src/codingProjects/nncexam.json" />
+        <option value="$PROJECT_DIR$/src/codingProjects/projects/nncexam.json" />
+        <option value="$PROJECT_DIR$/src/codingProjects/projects/epq.json" />
+        <option value="$PROJECT_DIR$/src/codingProjects/CodingProjects.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="37" />
+    <option name="y" value="15" />
+    <option name="width" value="1050" />
+    <option name="height" value="690" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ReactCVWebpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ReactCVWebpage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ReactCVWebpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ReactCVWebpage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ReactCVWebpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ReactCVWebpage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="codingProjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ReactCVWebpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ReactCVWebpage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="codingProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSLint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sam_b\Documents\ReactCVWebpage\src\codingProjects\projects" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sam_b\Documents\ReactCVWebpage\src\codingProjects" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/App.test.js" />
+      <test-names>
+        <test-name value="renders without crashing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="Jest.renders without crashing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4d00d3a-5eb0-4e73-99f9-16db1b1a42e2" name="Default Changelist" comment="" />
+      <created>1553113238978</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553113238978</updated>
+      <workItem from="1553113242266" duration="52000" />
+      <workItem from="1553113317485" duration="2132000" />
+      <workItem from="1553346088174" duration="430000" />
+      <workItem from="1553717116302" duration="6689000" />
+      <workItem from="1554664407228" duration="16853000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="renders_without_crashing - 2019.03.20 at 20h 22m 20s.xml">
+      <configuration name="renders without crashing" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="26156000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.658376" visible="true" weight="0.13961814" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" sideWeight="0.341624" side_tool="true" visible="true" weight="0.13961814" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32991952" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20409656" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Embedded Web Browser" order="3" weight="0.32975337" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="64" column="43" selection-start-line="64" selection-start-column="43" selection-end-line="64" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="3" lean-forward="true" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aboutme/AboutMe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="61" column="382" selection-start-line="61" selection-start-column="382" selection-end-line="61" selection-end-column="382" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/EPQ.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="33" selection-start-line="28" selection-start-column="20" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/NNCExamProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="n#NNCExamProject#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/resources/layer.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/ProjectileShooter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/StarExplorer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/footer/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/Pintos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/NNWebsiteProject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/projects/nncexam.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!block;n#language#0;n#!!top" />
+            <element signature="n#!!block;n#topic#0;n#!!top" />
+            <element signature="e#278#682#0" />
+            <element signature="e#326#615#0" />
+            <element signature="e#690#936#0" />
+            <element signature="e#944#1473#0" />
+            <element signature="e#1165#1202#0" />
+            <element signature="e#1286#1317#0" />
+            <element signature="e#1481#1680#0" />
+            <element signature="e#1654#8718#0" />
+            <element signature="e#9160#9190#0" />
+            <element signature="e#9229#9287#0" />
+            <element signature="e#9865#9895#0" />
+            <element signature="e#9932#9974#0" />
+            <element signature="e#10158#10365#0" />
+            <element signature="e#10637#11198#0" />
+            <element signature="e#11204#11234#0" />
+            <element signature="e#11272#11305#0" />
+            <element signature="e#11745#11775#0" />
+            <element signature="e#11812#11853#0" />
+            <element signature="e#12456#12487#0" />
+            <element signature="e#12970#13002#0" />
+            <element signature="e#13259#13301#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/projects/epq.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!block;n#language#0;n#!!top" />
+            <element signature="n#!!block;n#topic#0;n#!!top" />
+            <element signature="n#!!block;n#date#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/CodingProjects.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codingProjects/CodingProjects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="302" column="34" selection-start-line="302" selection-start-column="34" selection-end-line="302" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#!!block;n#constructArticle#0" />
+            <element signature="n#!!block;n#constructor#0;n#CodingProjects#0" />
+            <element signature="e#6813#6873#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

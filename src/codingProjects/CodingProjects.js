@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import {Alignment, Button, Checkbox, Classes, Text, Popover, Position, Hotkeys, Hotkey} from '@blueprintjs/core';
+import {Code, H1, H2, H3, H4, H5, H6, Alignment, Button, Checkbox, Classes, Text, Popover, Position, Hotkeys, Hotkey} from '@blueprintjs/core';
 import { DateRangePicker } from "@blueprintjs/datetime";
 import '@blueprintjs/datetime/lib/css/blueprint-datetime.css'
 import './CodingProjects.css';
-import {EPQ, checkStatesEPQ} from "./EPQ";
-import { checkStatesNNCE, NNCExamProject } from './NNCExamProject';
 import { checkStatesNNWP, NNWebsiteProject } from './NNWebsiteProject';
 import { checkStatesPS, ProjectileShooter } from './ProjectileShooter';
 import { checkStatesSE, StarExplorer } from './StarExplorer';
+import { checkStatesPintos, Pintos} from './Pintos';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/styles/hljs';
 
 const filterBoxViewWidth = 700;
  
-var windowWidth = window.document.body.clientWidth; 
+var windowWidth = window.document.body.clientWidth;
+
 const FilterBox = {
     width: "10%",
     minWidth: 200,
@@ -23,6 +25,7 @@ const FilterBox = {
     zIndex: 8,
     backgroundColor: 'white', 
 }
+
 const FilterBackground = {
     backgroundColor: 'rgba(174, 202, 153, 0.3)',
     width: "10%",
@@ -36,6 +39,14 @@ const Value = {
     paddingLeft: '5%'
 }
 
+const output= {
+    height: 'auto',
+    width: ((windowWidth <= 600) ? "100%" : "40%")
+}
+const structure= {
+    height: 'auto',
+    width: ((windowWidth <= 600) ? "100%" : "40%")
+}
 var code = {
     width: (windowWidth >= filterBoxViewWidth) ? windowWidth - 200 : "100%",
     marginLeft: (windowWidth >= filterBoxViewWidth) ? 200 : 0,
@@ -63,6 +74,103 @@ function placeWithin(firstRange, toInclose){
 const firstYearDateRange = [new Date(2017, 9, 8), new Date(2018, 8, 8)];
 const beforeUniDateRange = [new Date(2014, 9, 1), new Date(2017, 9, 1)];
 
+// Takes in a json topic file and returns true if it matches this state
+function checkStates(state, data){
+    const date = new Date(data.date.year, data.date.month, data.date.day);
+    return (
+        (state.state.Java || !data.language.java) &&
+        (state.state.C || !data.language.c) &&
+        (state.state.Web || !data.language.web) &&
+        (state.state.NN || !data.topic.nn) &&
+        (state.state.AI || !data.topic.ai) &&
+        (state.state.Simulation || !data.topic.simulation) &&
+        (state.state.Graphics || ! data.topic.graphics) &&
+        (state.state.OS || !data.topic.os) &&
+        (state.state.dateRange[0] <= date &&
+            state.state.dateRange[1] >= date));
+}
+
+const data = [require("./projects/nncexam.json"), require("./projects/epq.json")]
+
+function generateHeader(component) {
+    if (component.specialchar != null) {
+        return [
+            <i class={component.specialchar.front.class} style={component.specialchar.front.style} />,
+            component.body,
+            <i class={component.specialchar.back.class} style={component.specialchar.back.style} />
+            ];
+    }
+    return component.body;
+}
+
+function bodyParser(component) {
+    switch (component.type) {
+        case "h1" :
+            return <H1 style={component.style}>{generateHeader(component)}</H1>;
+        case "h2" :
+            return <H2 style={component.style}>{generateHeader(component)}</H2>;
+        case "h3" :
+            return <H3 style={component.style}>{generateHeader(component)}</H3>;
+        case "h4" :
+            return <H4 style={component.style}>{generateHeader(component)}</H4>;
+        case "h5" :
+            return <H5 style={component.style}>{generateHeader(component)}</H5>;
+        case "h6" :
+            return <H6 style={component.style}>{generateHeader(component)}</H6>;
+        case "text" :
+            return <Text style={component.style}>{component.body}</Text>;
+        case "reference" :
+            return <a href={component.url} style={component.style}>{bodyParser(component.body)}</a>
+        case "u-list" :
+            return <ul style={component.style}>{
+                component.body.map(function(component) {return bodyParser(component)})
+            }</ul>
+        case "entry" :
+            return [<li style={component.style}> {bodyParser(component.label)}</li>,
+                component.body.map(function(component) {return bodyParser(component)})]
+        case "highlighter" :
+            return <SyntaxHighlighter language={component.language} style={docco}>
+                {component.body}
+            </SyntaxHighlighter>
+        case "align-left" :
+            return <div style ={{textAlign: 'left'}}>{
+                component.body.map(function(component) {return bodyParser(component)})}
+            </div>
+        case "code" :
+            return <Code style={component.style}>{component.body}</Code>
+        case "string" :
+            return component.body
+        case "layered-text" :
+            return <Text>{component.body.map(function(component) {return bodyParser(component)})}</Text>
+        case "div":
+            return <div style={component.style}>{component.body.map(function(component) {return bodyParser(component)})}</div>
+        case "image":
+            var style = (component.style === "output") ? output : ((component.style === "structure") ? structure : null)
+            return <img
+                style={style}
+                src={images.get(component.src)}
+                resizeMethod={component.resizeMethod}
+                accessibilityLabel={component.accessibilityLabel}
+                accessible={component.accessible}
+            />
+    }
+}
+// define images here
+var images = new Map()
+images.set("structure", require("./resources/structure.png"))
+images.set("XORNNOutput", require("./resources/XORNNOutput.png"))
+images.set("Button", require("./resources/Button.png"))
+
+function constructArticle(generator) {
+    return data.map(function(data) {
+        if (checkStates(generator, data)) {
+            return data.body.map(function (component) {
+                return bodyParser(component)
+            })
+        }
+    })
+}
+
 export class CodingProjects extends Component{
     constructor(props){
         super(props);
@@ -89,11 +197,11 @@ export class CodingProjects extends Component{
         return (
             <div className="bp3-running-text .modifier" >
                 <div className="SearchBox" >
-                    
-                    {(windowWidth < filterBoxViewWidth) &&                   
+
+                    {(windowWidth < filterBoxViewWidth) &&
                         <div>
                             <button style={{top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 7, opacity: 0}} onClick={() => this.setState(prevState => ({filterBoxVisible: !prevState.filterBoxVisible}))}/>
-                            <img 
+                            <img
                                 style={{ top: 160, width: 50, height: 100, position: 'fixed', left: (this.state.filterBoxVisible) ? 200: 0, zIndex: 5,}}
                                 src={require('./resources/Button.png')}
                                 accessibilityLabel="The team of 13 that built the bridge."
@@ -106,9 +214,9 @@ export class CodingProjects extends Component{
                     <div style={FilterBox}>
                         <div style={FilterBackground}>
                         <Text style={Value}>Date: </Text>
-                        <Popover style={Value} 
-                            content={        
-                                <DateRangePicker 
+                        <Popover style={Value}
+                            content={
+                                <DateRangePicker
                                     value={this.state.dateRange}
                                     className={Classes.ELEVATION_1}
                                     onChange={(dateRange) => {
@@ -135,7 +243,7 @@ export class CodingProjects extends Component{
                         <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.FirstYear} label="First Year" onChange={() => {
                                 this.setState(prevState => ({FirstYear: !prevState.FirstYear}));
-                                if (!this.state.FirstYear){ 
+                                if (!this.state.FirstYear){
                                     this.setState(prevState => ({dateRange: placeWithin(prevState.dateRange, firstYearDateRange)}));
                                 } else {
                                     if (this.state.PreUni){
@@ -149,7 +257,7 @@ export class CodingProjects extends Component{
                         <div style={Value}>
                             <Checkbox style={{float: 'left'}} checked={this.state.PreUni} label="Before University" onChange={() => {
                                 this.setState(prevState => ({PreUni: !prevState.PreUni}));
-                                if (!this.state.PreUni){ 
+                                if (!this.state.PreUni){
                                     this.setState(prevState => ({dateRange: placeWithin(prevState.dateRange, beforeUniDateRange)}));
                                 } else {
                                     if (this.state.FirstYear){
@@ -190,13 +298,14 @@ export class CodingProjects extends Component{
                     }
                 </div>
                 <div style={code}>
-                    {(checkStatesNNCE(this) && <NNCExamProject/>)}
+                    {(constructArticle(this))}
+                </div>
+                <div style={code}>
                     {(checkStatesNNWP(this) && <NNWebsiteProject/>)}
                     {(checkStatesPS(this) && <ProjectileShooter/>)}
                     {(checkStatesSE(this) && <StarExplorer/>)}
-                    {(checkStatesEPQ(this) && <EPQ/>)}
                 </div>
             </div>
-        );
+        )
     }
 }

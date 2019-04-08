@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {Code, Text, H2, H5, H3} from '@blueprintjs/core';
+import {Code, Text, H2, H5, H3, H4, H6} from '@blueprintjs/core';
 import 'video-react/dist/video-react.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/styles/hljs';
 
-export function checkStatesNNCE(states){
+export function checkStatesPintos(states){
     return (states.state.C && 
-        states.state.NN &&
+        states.state.OS &&
         (states.state.dateRange[0] <= date && 
             states.state.dateRange[1] >= date));
 }
@@ -41,16 +41,52 @@ const alignLeft= {
 	textAlign:'left'
 }
 
-const date = new Date(2018, 6, 23);
+const date = new Date(2018, 12, 20);
 
-export class NNCExamProject extends React.PureComponent{
+export class Pintos extends React.PureComponent{
     render(){		
         return (
             <div class="bp3-running-text .modifier">
-				<H2> <i class="fas fa-brain" style={{color: 'orange'}}/> Feed-Forward Artificial Neural Network <i class="fas fa-brain" style={{color: 'blue'}}/></H2>
-				<Text> A Feed-Forward Artificial Neural Network entirely in C, using backpropagation algorithm to train.
+				<H2> <i class="fas fa-brain" style={{color: 'orange'}}/> Pintos - Operating System <i class="fas fa-brain" style={{color: 'blue'}}/></H2>
+				<Text> An Operating System implemented in C.
 				</Text>
-                <Text> Utilising the knowledge and techniques I learned when researching Feed-Forward Networks and Backpropagation for my teams website project I was able to develop a ANN model entirely in C which was able to learn the XOR problem achieving over 99% accuracy.</Text>
+                <Text> I led a team of four students in developing an Operating System entirely in C. We were given a skeleton Operating System and tasked with developing features for the Operating System, we were tasked with implementing:</Text>
+				<ul>
+					<li href="deadWait">Remove busy waiting during scheduling</li>
+					<li href="">Processor Scheduling</li>
+					<li href="">User Programs</li>
+					<li href="">Virtual Memory</li>
+				</ul>
+				<H3 label="deadWait">Task 0 - Busy Waiting</H3>
+				<H6>The Problem</H6>
+				<Text>
+					Busy waiting is defined as "a technique in which a process repeatedly checks to see if a condition is true". What this means in terms of Pintos
+					is that when a thread becomes blocked, whenever we switch back to that process, the process checks if it is ready to be woken up and if so continue
+					executing the process. This is means we are constantly switching between threads that are blocked just to check if it needs waking up,
+					this swap operation involves loading in a whole new processor context, taking up a lot of processing time and therefore needs to be reduced.
+				</Text>
+				<H6>General Solutions</H6>
+				<Text>
+					There are two common solutions to busy waiting, the first is reducing the amount of swaps and the second is to remove it all together. We could reduce
+					the amount of swaps being made by reducing the amount of times we have to check; if we were programming in Java, we might call the <Code>Thread.sleep(x)</Code>
+					function so that we won't check whether we wake up the thread for <Code>x</Code> amount of milliseconds. This is flawed in some regards as if we want a
+					thread to wake up after so many ticks, we can not guarantee when it will become unblocked, only the fact that it will be open at some point after that tick.
+					Another solution here is to reduce the priority of the blocked threads therefore reducing how many times we are swapping to the thread, this too is flawed
+					for the same reason. The busy waiting can be removed completely using some sort of system call which notifies the Operating System that the process can be
+					woken up, unblocking the process so it can now be ran; we can then just check for any of these system calls all in one without having to switch processes.
+				</Text>
+				<H6>My Solution</H6>
+				<Text>
+					The specification for this task requires that we need to unblock the process at exactly the correct clock tick (the thread does not need to become active,
+					just added to the processing queue) therefore the system call solution seems the most apparent. The obvious solution would be to use some sort of locking
+					mechanism 
+				</Text>
+				<H3>Task 1 - Processor Scheduling</H3>
+				<H3>Task 2 - User Programs</H3>
+				<H3>Task 3 - Virtual Memory</H3>
+				<H4 style={{padding:'0.4', marginTop:'0'}}>Swapping</H4>
+				<H4 style={{padding:'0.4', marginTop:'0'}}>Eviction Policy</H4>
+
 				<H5 style={{padding:'0.4', marginTop:'0'}}><a href="https://github.com/Velinguard/C-Artificial-Neural-Network"><p> Git Repository</p></a></H5>
 				<H3 style={{padding:'0', marginTop:'0'}}>Code Analysis</H3>
 				<Text>
