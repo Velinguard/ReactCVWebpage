@@ -20,15 +20,49 @@
   "body" : [
       {
         "type" : "h2",
-        "body" : "Extended Project - Bridge Strength Analysis"
+        "specialchar": {
+          "front" : {
+            "class": "fas fa-brain",
+            "style": {
+              "color": "orange"
+            }
+          },
+          "back" : {
+            "class": "fas fa-brain",
+            "style": {
+              "color": "blue"
+            }
+          }
+        },
+        "body" : "Website Project - Artificial Neural Network"
+      },
+      {
+        "type": "quote",
+        "quote": "One of the best presentations that I remember... Fantastic presentation, clear and coherent, very lively illustration of how the gradient descent works using a tablecloth and a small billiard ball, great team work",
+        "author": {
+          "type": "reference",
+          "url": "https://www.doc.ic.ac.uk/~ae/",
+          "body": {
+            "type": "string",
+            "body": "Abbas Edalat"
+          }
+        }
+      },
+      {
+        "type": "h4",
+        "body": "Project Outline"
+      },
+      {
+        "type": "text",
+        "body": "Over a 12-week period during the Second Term of University, we were tasked to Research and develop a website on a Computing Topic. As a team of four we were tasked with developing a website on <b>Feed-Forward Neural Networks and Backpropagation</b> which would include research into the theory, mathematics and history of this type of ANN. The website would be used to accompany a presentation that we would present to First Year Computing Students (our target audience) as well as several professors."
       },
       {
         "type" : "text",
-        "body" : "This project aimed at modelling the stress and load experienced by a suspension bridge, comparing these values to the maximum strength of the materials to determine the max load on the bridge."
+        "body" : "I took the role of Team Lead for this Project which brought about a number of unique and varied challenges for me to overcome. "
       },
       {
-        "type" : "text",
-        "body" : "This software was designed as a precursor to the Suspension Bridge we would build in India, calculating the measurements we would be using. This was procedurally programmed, and therefore was limited in its uses from a software side. Bringing together all the knowledge from my different A-Level subjects into one project; this software was extremely maths heavy from a mechanical perspective, meaning the mechanics modules I was studying as well as my Physics came into use."
+        "type": "text",
+        "body": "As a team we were rewarded with Prizes for “Second Best Presentation” and “Best Neural Network project” out of 37 groups, we achieved a mark of 54/55."
       },
       {
         "type" : "text",

@@ -1,5 +1,23 @@
 import React, { Component } from 'react';
-import {Code, H1, H2, H3, H4, H5, H6, Alignment, Button, Checkbox, Classes, Text, Popover, Position, Hotkeys, Hotkey} from '@blueprintjs/core';
+import {
+    Code,
+    H1,
+    H2,
+    H3,
+    H4,
+    H5,
+    H6,
+    Alignment,
+    Button,
+    Checkbox,
+    Classes,
+    Text,
+    Popover,
+    Position,
+    Hotkeys,
+    Hotkey,
+    Blockquote
+} from '@blueprintjs/core';
 import { DateRangePicker } from "@blueprintjs/datetime";
 import '@blueprintjs/datetime/lib/css/blueprint-datetime.css'
 import './CodingProjects.css';
@@ -153,8 +171,12 @@ function bodyParser(component) {
                 accessibilityLabel={component.accessibilityLabel}
                 accessible={component.accessible}
             />
-    }
+        case "quote":
+            return <Blockquote>"{component.quote}"</Blockquote>,<small style={{width: '70%', marginRight: '15%', marginTop: '0%',  color: 'rgb(100, 100, 100)',  fontSize: '15px',	textAlign: 'right',  float: 'right'}}> ~{bodyParser(component.author)}</small>
+
 }
+}
+
 // define images here
 var images = new Map()
 images.set("structure", require("./resources/structure.png"))

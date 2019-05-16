@@ -19,6 +19,7 @@ const headerStyle = {
 
 var windowWidth = window.document.body.clientWidth;
 
+var baseTag = window.location.href.split('#')[0];
 var pageTag = window.location.href.split('#')[1];
 const CodingLink = "CodingProjects";
 const AirCadetsLink = "AirCadets";
@@ -52,10 +53,10 @@ class App extends Component {
               <Navbar.Group align={Alignment.LEFT}>
                   <Navbar.Heading>{me}</Navbar.Heading>
                   <Navbar.Divider />
-                  <Button className="bp3-minimal" icon="home" text="Home" onClick={() => this.setState({page: 0})} />
-                  <Button className="bp3-minimal" icon="airplane" text={cadets} onClick={() => this.setState({page: 1})}/>
-                  <Button className="bp3-minimal" icon="wrench" text={bridge} onClick={() => this.setState({page: 2})} />
-                  <Button className="bp3-minimal" icon="console" text={coding} onClick={() => this.setState({page: 3})}/>
+                  <Button className="bp3-minimal" icon="home" text="Home" onClick={() => {this.setState({page: 0}); window.location.href = baseTag}} />
+                  <Button className="bp3-minimal" icon="airplane" text={cadets} onClick={() => {this.setState({page: 1}); window.location.href = baseTag + "#" + AirCadetsLink}}/>
+                  <Button className="bp3-minimal" icon="wrench" text={bridge} onClick={() => {this.setState({page: 2}); ; window.location.href = baseTag + "#" + StGregsBridgeLink}} />
+                  <Button className="bp3-minimal" icon="console" text={coding} onClick={() => {this.setState({page: 3}); ; window.location.href = baseTag + "#" + CodingLink}}/>
               </Navbar.Group>
             </Navbar>
           </header>
