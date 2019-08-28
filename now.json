@@ -4,5 +4,5 @@
   "builds": [
     { "src": "sitemap.xml", "use": "@now/static" },
     { "src": "robots.txt", "use": "@now/static" }
-  ],
+  ]
 }
