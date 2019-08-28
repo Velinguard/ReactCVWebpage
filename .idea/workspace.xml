@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4d00d3a-5eb0-4e73-99f9-16db1b1a42e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/now.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pancake/css/pancake.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pancake/css/pancake.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pancake/react/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/pancake/react/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pancake/sass/pancake.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pancake/sass/pancake.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/now.json" beforeDir="false" afterPath="$PROJECT_DIR$/now.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/now.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -251,7 +245,7 @@
       <workItem from="1555604376676" duration="705000" />
       <workItem from="1555702598586" duration="217000" />
       <workItem from="1558027104115" duration="434000" />
-      <workItem from="1567025345372" duration="1568000" />
+      <workItem from="1567025345372" duration="1660000" />
     </task>
     <servers />
   </component>
@@ -261,7 +255,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30858000" />
+    <option name="totallyTimeSpent" value="30950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1444" height="1013" extended-state="6" />
@@ -507,7 +501,7 @@
     <entry file="file://$PROJECT_DIR$/now.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
