@@ -2,6 +2,6 @@
   "version": 2.0,
   "regions": ["lhr1"],
   "builds": [
-    { "src": "/public/sitemap.xml", "use": "@now/static/sitemap.xml" }
+    { "src": "./public/sitemap.xml", "use": "@now/static/sitemap.xml" }
   ]
 }
