@@ -46,6 +46,7 @@ class App extends Component {
     var coding = ((windowWidth >= 600) ? "Coding Projects" : "Projects");
     return (
       <div className="App">
+          <meta name={"Description"} content={"Sam Brotherton CV Webpage"}></meta>
         <div style={headerStyle}>
           <header className="App-header">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
