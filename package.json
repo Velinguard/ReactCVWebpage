@@ -77,6 +77,9 @@
     },
     "react": {
       "location": "pancake/react/"
+    },
+    "sitemap": {
+      "location": "public/sitemap.xml"
     }
   }
 }
