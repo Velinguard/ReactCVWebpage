@@ -127,8 +127,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/Cadets.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -350,7 +354,6 @@
       <workItem from="1555702598586" duration="217000" />
       <workItem from="1558027104115" duration="434000" />
       <workItem from="1567025345372" duration="6492000" />
-      <workItem from="1568658218494" duration="10355000" />
     </task>
     <servers />
   </component>
