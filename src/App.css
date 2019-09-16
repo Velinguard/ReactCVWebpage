@@ -5,7 +5,10 @@
 .App-header {
   background-color:rgba(255, 227, 159, 0.3);
   padding: 20px;
-  color: #182026; 
+  margin-top: -90px;
+  color: #182026;
+  position: fixed;
+  width: 100%;
 }
 
 .App-title {
@@ -17,7 +20,7 @@
 }
 
 .App-body {
-  background-color: #fffff9;  
+  background-color: #fffff9;
 }
 
 .header {
@@ -25,5 +28,4 @@
   z-index: 9999; 
   width: '100%'; 
   background-color: 'rgba(255,255,255,1)'; 
-  margin-top: -90;
 }

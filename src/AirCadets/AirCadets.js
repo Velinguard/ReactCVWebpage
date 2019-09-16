@@ -67,3 +67,4 @@ export class AirCadets extends Component{
         )
     }
 }
+export default AirCadets
