@@ -19,10 +19,12 @@ const headerStyle = {
     width: '100%',
     backgroundColor: 'rgba(255,255,255,1)'
 }
+var url = window.location.href
 
 class App extends Component {
     constructor(props) {
         super(props);
+        this.state = {url}
     }
 
     render() {
