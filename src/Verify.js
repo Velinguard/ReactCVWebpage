@@ -3,6 +3,6 @@ import React, {Component} from "react";
 
 export class Verify extends Component {
     render() {
-        return <Text>1570782272794</Text>
+        return <div>1570782272794</div>
     }
 }
