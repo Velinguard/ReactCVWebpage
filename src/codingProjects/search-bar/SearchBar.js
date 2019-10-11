@@ -1,7 +1,9 @@
 import {Alignment, Button, Checkbox, Classes, Popover, Position, Text} from "@blueprintjs/core";
 import {DateRangePicker} from "@blueprintjs/datetime";
 import React, {Component} from "react";
+import { MuiThemeProvider } from 'material-ui/styles';
 import Moment from 'moment';
+import TextField from 'material-ui/TextField';
 
 const windowWidth = window.document.body.clientWidth;
 
@@ -60,9 +62,15 @@ export class SearchBar extends Component {
     params = new URLSearchParams()
 
     updateUrl(value, param) {
+        console.log(param)
         if (param === 'date-range') {
             this.params.set('date-from', Moment(value[0]).format('YYYY-MM-DD'))
             this.params.set('date-to', Moment(value[1]).format('YYYY-MM-DD'))
+        } else if (param === 'filter') {
+            if (this.params.get('filter') === value) {
+                return
+            }
+            this.params.set('filter', value)
         } else {
             if (value) {
                 this.params.set(param, false)
@@ -75,6 +83,10 @@ export class SearchBar extends Component {
     }
 
     render() {
+        const handleChange = name => event => {
+            this.updateUrl(event.target.value, 'filter')
+        };
+        let textField = ""
         return <div>
             {(windowWidth < filterBoxViewWidth) &&
             <div>
@@ -105,6 +117,16 @@ export class SearchBar extends Component {
             {(windowWidth >= filterBoxViewWidth || this.state.filterBoxVisible) &&
             <div style={FilterBox}>
                 <div style={FilterBackground}>
+                    <Text style={Value}>Filter: </Text>
+                    <MuiThemeProvider>
+                    <form noValidate autoComplete="off">
+                    <TextField
+                        id="standard-name"
+                        label="Name"
+                        onChange={handleChange('name')}
+                        margin="normal"/>
+                    </form>
+                    </MuiThemeProvider>
                     <Text style={Value}>Date: </Text>
                     <Popover style={Value}
                              content={

@@ -45,6 +45,7 @@ const beforeUniDateRange = [new Date(2014, 9, 1), new Date(2017, 9, 1)];
 // Takes in a json topic file and returns true if it matches this state
 function checkStates(state, data) {
     const date = new Date(data.date.year, data.date.month, data.date.day);
+    console.log(new RegExp(state.filter))
 
     return (
         (state.state.Java || !data.language.java) &&
@@ -56,7 +57,8 @@ function checkStates(state, data) {
         (state.state.Graphics || !data.topic.graphics) &&
         (state.state.OS || !data.topic.os) &&
         (state.state.dateRange[0] <= date &&
-            state.state.dateRange[1] >= date));
+            state.state.dateRange[1] >= date) &&
+        new RegExp(state.filter).test(data.name));
 }
 
 const data = [require("./projects/nncexam.json"), require("./projects/epq.json")]
@@ -179,6 +181,7 @@ export class CodingProjects extends Component {
             PreUni: true,
             dateRange: [beforeUniDateRange[0], new Date()],
             filterBoxVisible: false,
+            filter: ""
         }
         let params = new URLSearchParams(window.location.search)
 
@@ -218,6 +221,9 @@ export class CodingProjects extends Component {
         if (params.has('date-to')) {
             this.state.dateRange[1] = new Date(Date.parse(params.get('date-to')))
         }
+        if (params.has('filter')) {
+            this.state.filter = params.get('filter')
+        }
     }
 
     update = (value, state) => {
@@ -254,6 +260,9 @@ export class CodingProjects extends Component {
                 return
             case 'date-range':
                 this.setState(({dateRange: [state[0], state[1]]}));
+                return
+            case 'filter':
+                this.setState(({filter: state}));
                 return
         }
     };

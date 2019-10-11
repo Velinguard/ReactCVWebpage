@@ -7,9 +7,11 @@ import {AboutMe} from './aboutme/AboutMe';
 import {AirCadets} from './AirCadets/AirCadets';
 import {India} from './india/India';
 import {CodingProjects} from './codingProjects/CodingProjects';
+import {Verify} from './Verify'
 import {BrowserRouter, Link} from "react-router-dom";
 import Route from "react-router-dom/es/Route";
 import {Header} from "./Header/Header";
+import {Text} from "@blueprintjs/core";
 
 const headerStyle = {
     position: 'fixed',
@@ -44,6 +46,7 @@ class App extends Component {
                             <Route path="/air-cadets" component={AirCadets}/>
                             <Route path="/india" component={India}/>
                             <Route path="/coding-projects" component={CodingProjects}/>
+                            <Route path="/zohoverify/verifyforzoho.html" component={Verify}/>
                         </div>
                     </div>
                     </body>
